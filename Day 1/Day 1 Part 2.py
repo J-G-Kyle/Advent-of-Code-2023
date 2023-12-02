@@ -63,10 +63,6 @@ num_dict = {
     'enin': 9
 }
 
-# initialize variables
-notfound= True
-count = 0
-
 # Read in input file, strip newline character, append to inputs list
 with open('input.txt') as file:
     for line in file:
@@ -109,7 +105,3 @@ total = []
 for item1, item2 in all_nums:
     total.append(int(str(item1) + str(item2)))
 print(sum(total))
-
-
-#total = sum(alldigits)
-#print(total)
