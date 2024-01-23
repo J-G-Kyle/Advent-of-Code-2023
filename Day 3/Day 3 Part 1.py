@@ -5,7 +5,6 @@ import re
 input = []
 symbols = []
 c = Counter()
-maxcol = 0
 
 # read input into a 2D array
 file = open('Test1.txt')
@@ -43,13 +42,13 @@ for j in range(len(input)):
             tuples.append(tup)
 
 # tuples is a list of locations (row, column) of all symbols in input
-
-
 print(tuples)
+def checknum(tuple):
+    # regex pattern to match numerals
+    numpattern = re.compile("[0-9]")
+    # check top left location (-1, -1)
+    if tuple[0] > 0 and tuple[1] > 0:
+        print(input[tuple[0]][tuple[1]])
 
+checknum((1,3))
 
-# find the locations of each symbol and put them in a list of tuples?
-
-
-#print(input[1][3])
-#print(input)
